@@ -1,0 +1,16 @@
+node_modules
+/public
+.gatsby-context.js
+.DS_Store
+.intermediate-representation/
+.cache/
+yarn.lock
+
+
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build directory
+.DS_Store
+
