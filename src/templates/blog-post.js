@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 class BlogPostTemplate extends React.Component {
@@ -9,13 +10,15 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <div><div className="inner">
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>{post.frontmatter.title}</h1>
+      <div>
+        <div className="inner">
+          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+          <h1>{post.frontmatter.title}</h1>
 
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
-      </div></div>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr />
+        </div>
+      </div>
     )
   }
 }
